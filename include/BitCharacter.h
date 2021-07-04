@@ -3,20 +3,19 @@
 #include <stdint.h>
 #include <vector>
 #include <stdexcept>
-using namespace std;
 
 class BitCharacter {
 private:
     char character;
-    vector<vector<int8_t>>* representation;
+    std::vector<std::vector<int8_t>>* representation;
 public:
     BitCharacter(){};
-    BitCharacter(char c, vector<vector<int8_t>>* rep){
+    BitCharacter(char c, std::vector<std::vector<int8_t>>* rep){
         character = c;
         representation = rep;
     };
 
-    vector<vector<int8_t>>* getRepresentation(){
+    std::vector<std::vector<int8_t>>* getRepresentation(){
         return representation;
     };
 };

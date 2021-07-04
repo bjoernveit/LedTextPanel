@@ -7,7 +7,7 @@
 
 class CharacterService {
 private:
-    std::map<char, BitCharacter> characterMap;
+    std::map<char, BitCharacter*> characterMap;
 public:
     CharacterService();
     BitCharacter* getBitCharacterFor(char c);

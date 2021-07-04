@@ -6,17 +6,17 @@
 #include "TextDisplay.h"
 #include "DisplayService.h"
 
-using namespace std;
-
-class DisplayController {
+class DisplayController
+{
 private:
     DisplayService displayService;
-    queue<TextDisplay> que;
-    TextDisplay* currentDisplay;
-    vector<vector<int8_t>*>* getNextBits();
+    std::queue<TextDisplay> que;
+    TextDisplay *currentDisplay;
+    std::vector<std::vector<int8_t> *> *getNextBits();
+
 public:
     DisplayController();
-    void addDisplayText(string text);
+    void addDisplayText(std::string text);
     void tick();
 };
 

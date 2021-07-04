@@ -3,14 +3,14 @@
 DisplayService::DisplayService()
 {
     FastLED.addLeds<LED_TYPE, LED_PIN, COLOR_ORDER>(leds, NUM_LEDS);
-}
+};
 
-void DisplayService::show(vector<vector<int8_t>*>* bits)
+void DisplayService::show(std::vector<std::vector<int8_t>*>* bits)
 {
     for (int rowIndex = 0; rowIndex < size(*bits); rowIndex++)
     {
         bool isTopDownRow = rowIndex % 2 == 0;
-        vector<int8_t>* row = (*bits)[rowIndex];
+        std::vector<int8_t>* row = (*bits)[rowIndex];
         for (int i = 0; i < size(*row); i++)
         {
             int vectorIndexForLed = isTopDownRow ? i : 7 - i;
@@ -24,4 +24,4 @@ void DisplayService::show(vector<vector<int8_t>*>* bits)
     }
 
     FastLED.show();
-}
+};

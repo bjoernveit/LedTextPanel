@@ -14,14 +14,12 @@
 #define NMBR_OF_ROWS 32
 #define NUM_LEDS (HEIGHT_OF_ROW * NMBR_OF_ROWS)
 
-using namespace std;
-
 class DisplayService {
 private:
   CRGB leds[NUM_LEDS];
 public:
     DisplayService();
-    void show(vector<vector<int8_t>*>* bits);
+    void show(std::vector<std::vector<int8_t>*>* bits);
 };
 
 #endif
